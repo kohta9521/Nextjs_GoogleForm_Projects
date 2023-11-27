@@ -6,6 +6,9 @@ import Link from 'next/link'
 import styles from './page.module.scss'
 
 // components import
+import Personal from '@/components/personal/Personal'
+import App from '@/components/sample'
+
 
 export default function Home() {
   // formの切り替えボタン用
@@ -20,6 +23,7 @@ export default function Home() {
         また、お問い合わせの内容によってはお返事にお時間をいただく場合がございます。ご了承ください。<br />
       </p>
       {/* formはここから */}
+      
       <div className={styles.formBox}>
         <div className={styles.flexButtonBox}>
           <button
@@ -39,11 +43,11 @@ export default function Home() {
         <div className={styles.formContent}>
           {form === 'personal' ? (
               <div className={styles.box}>
-
+                <App />
               </div>
             ) : (
               <div className={styles.box}>
-
+                <h1>company</h1>
               </div>
             )}
         </div>
