@@ -6,6 +6,8 @@ import Link from 'next/link'
 import styles from './page.module.scss'
 
 // components import
+import Personal from '@/components/personal/Personal'
+
 
 export default function Home() {
   // formの切り替えボタン用
@@ -39,11 +41,11 @@ export default function Home() {
         <div className={styles.formContent}>
           {form === 'personal' ? (
               <div className={styles.box}>
-
+                <Personal />
               </div>
             ) : (
               <div className={styles.box}>
-
+                <h1>company</h1>
               </div>
             )}
         </div>
